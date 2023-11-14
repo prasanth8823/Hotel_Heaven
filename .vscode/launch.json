@@ -1,0 +1,65 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-signUpApplication<com.WebApplication-SignUpService>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.application.signUpApplication",
+            "projectName": "com.WebApplication-SignUpService",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-signUpApplication<SignUpService>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.application.signUpApplication",
+            "projectName": "SignUpService",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=50970 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=SignUpService"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-LoginApplication<com.WebApplication-Login>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.application.LoginApplication",
+            "projectName": "com.WebApplication-Login",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-OrderManagementApplication<OrderManagement>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.application.OrderManagementApplication",
+            "projectName": "OrderManagement",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MenuManagementApplication<MenuManagement>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.application.MenuManagementApplication",
+            "projectName": "MenuManagement",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HotelManagementApplication<HotelManagement>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.application.HotelManagementApplication",
+            "projectName": "HotelManagement",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

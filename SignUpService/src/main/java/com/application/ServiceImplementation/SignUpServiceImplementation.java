@@ -1,8 +1,6 @@
 package com.application.ServiceImplementation;
 
 import java.util.Optional;
-import java.util.Random;
-import java.util.Scanner;
 
 import org.hibernate.boot.model.naming.IllegalIdentifierException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,8 +55,6 @@ public class SignUpServiceImplementation implements SignUpService {
 		long phNomber = 7358188823l;
 
 		SimpleMailMessage mailMessage = new SimpleMailMessage();
-		Random random = new Random();
-		int OTP = random.nextInt(10000) + 1;
 		mailMessage.setTo(emailid);
 		mailMessage.setSubject("Account Created Successfully");
 		mailMessage.setText(
@@ -67,7 +63,9 @@ public class SignUpServiceImplementation implements SignUpService {
 						+ ", and we're excited to have you on board\n\n\n\nPlease keep your login credentials confidential and do not share them with anyone. If you encounter any issues during the login process or have any questions, please don't hesitate to contact our support team at "
 						+ companyEmail + " or " + phNomber
 						+ ".\n\n\nWe look forward to providing you with a seamless and rewarding experience with "
-						+ companyName + ". Thank you for choosing us, and welcome to our community!\n\n\n\nBest regards,\n\n\nCompany Name: "+companyName+"\nCompany EmailId: "+companyEmail+"\nCompany PhoneNumber: "+phNomber);
+						+ companyName
+						+ ". Thank you for choosing us, and welcome to our community!\n\n\n\nBest regards,\n\n\nCompany Name: "
+						+ companyName + "\nCompany EmailId: " + companyEmail + "\nCompany PhoneNumber: " + phNomber);
 		mailSender.send(mailMessage);
 	}
 }
