@@ -17,7 +17,7 @@ public class Menu {
 	
 	@Id
 	@GeneratedValue(generator = "Menu_Generator" ,strategy = GenerationType.AUTO)
-	@SequenceGenerator(name = "Menu_Generator", sequenceName = "Menu_Sequence")
+	@SequenceGenerator(name = "Menu_Generator", sequenceName = "Menu_Sequence",initialValue = 1,allocationSize = 1)
 	private int dishId;
 	
 	@Column(nullable = false)
