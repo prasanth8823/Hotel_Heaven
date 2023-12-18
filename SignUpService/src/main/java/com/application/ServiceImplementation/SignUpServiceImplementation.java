@@ -16,8 +16,11 @@ import com.application.model.UserCredentialsModel;
 @Component
 public class SignUpServiceImplementation implements SignUpService {
 
+	//for get information from database.
 	@Autowired
 	SignUpRepository repo;
+	
+	//to send mail to divice
 	@Autowired
 	JavaMailSender mailSender;
 
@@ -29,6 +32,7 @@ public class SignUpServiceImplementation implements SignUpService {
 
 		if (findByEmailId.isPresent() || findByPhoneNumber.isPresent()) {
 			throw new IllegalIdentifierException("user already exists");
+			
 		} else if (!userFields.getPassword().equals(userFields.getConFrimPassword())) {
 			throw new IllegalArgumentException(
 					"Password Mismatch" + "[" + userFields.getPassword() + "," + userFields.getConFrimPassword() + "]");

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LoginStyle.css">
+    <script src="loginjs.js"></script>
+    <title>login</title>
+</head>
+
+<body>
+    <div class="bg-image"></div>
+    <div class="container">
+        <div class="brandname">
+            <h1 id="sitename">HOTEL HEAVEN</h1>
+            <h2 id="slogan">Taste a Slice of Paradise.</h2>
+        </div>
+        <form onsubmit="inputvalidation()" action="http://localhost:20001/HotelHaven/Login" method="post" id="form">
+            <div id="inputalignment">
+                <h1 id="heading">Login Account</h1>
+                <input type="email" name="emailId" id="emailId" class="inputs" placeholder="Email Id" required
+                    max="100"><br>
+                <input type="password" name="password" id="password" class="inputs" placeholder="Password" required><br>
+                <button id="submit" class="inputs">Login</button>
+                <div class="terms">
+                    <a href="http://127.0.0.1:5500/forgetpassword/forgetpasswordindex.html" id="forgetpassword">Forget
+                        Password</a><br>
+                    <a href="http://127.0.0.1:5500/signup/signupindex.html" id="signup">Signup</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
